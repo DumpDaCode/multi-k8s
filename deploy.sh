@@ -1,12 +1,12 @@
-docker build -t dumpdacode/multi-client:latest -t dumpdacode/multi-client:$SHA  ./client/Dockerfile ./client
+docker build -t dumpdacode/multi-client:latest -t dumpdacode/multi-client:$SHA -f ./client/Dockerfile ./client
 docker push dumpdacode/multi-client:latest
 docker push dumpdacode/multi-client:$SHA
 
-docker build -t dumpdacode/multi-server:latest -t dumpdacode/multi-server:$SHA ./server/Dockerfile ./server
+docker build -t dumpdacode/multi-server:latest -t dumpdacode/multi-server:$SHA -f ./server/Dockerfile ./server
 docker push dumpdacode/multi-server:latest
 docker push dumpdacode/multi-server:$SHA
 
-docker build -t dumpdacode/multi-worker:latest -t dumpdacode/multi-worker:$SHA  ./worker/Dockerfile ./worker
+docker build -t dumpdacode/multi-worker:latest -t dumpdacode/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 docker push dumpdacode/multi-worker:latest
 docker push dumpdacode/multi-worker:$SHA
 
