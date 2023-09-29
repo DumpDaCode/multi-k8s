@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: stephengrider/multi-server
+          image: dumpdacode/multi-server
           ports:
             - containerPort: 3000
           env: 
